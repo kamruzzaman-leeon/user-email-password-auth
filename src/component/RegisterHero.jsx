@@ -1,4 +1,6 @@
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React from 'react';
+import auth from '../firebase.config';
 
 const RegisterHero = () => {
     const handleRegister = e =>{
@@ -6,6 +8,16 @@ const RegisterHero = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
+
+        createUserWithEmailAndPassword(auth,email,password)
+
+        .then(result=>{
+          console.log(result)
+        })
+
+        .catch(error=>{
+          console.error(error);
+        } )
     }
     return (
         <div className="hero min-h-screen bg-base-200 p-10">
