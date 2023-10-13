@@ -6,11 +6,12 @@ const Header = () => {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/login'>Login</NavLink></li>
         <li><NavLink to='/register'>Register</NavLink></li>
+        <li><NavLink to="/register-hero">Register Hero</NavLink></li>
 
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className=" navbar bg-base-100 flex justify-around">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -23,7 +24,7 @@ const Header = () => {
                 <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 gap-10">
                     {navLinks}
                 </ul>
             </div>
